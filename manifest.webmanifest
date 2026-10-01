@@ -1,0 +1,19 @@
+{
+  "id": "/",
+  "name": "NU Smart ID Queue",
+  "short_name": "NU Queue",
+  "description": "National University Smart ID application and claiming queue.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#f4f6f9",
+  "theme_color": "#063c70",
+  "icons": [
+    {
+      "src": "/assets/app-icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

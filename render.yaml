@@ -1,0 +1,25 @@
+services:
+  - type: web
+    name: nu-smart-id-queue
+    runtime: node
+    region: singapore
+    plan: 0.5c-512mb
+    numInstances: 1
+    buildCommand: npm ci && node -e "require('fs').rmSync('data/database.db',{force:true})"
+    startCommand: npm start
+    healthCheckPath: /
+    disk:
+      name: nu-smart-id-data
+      mountPath: /var/data
+      sizeGB: 1
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DATA_DIR
+        value: /var/data
+      - key: DEMO_MODE
+        value: "false"
+      - key: ADMIN_USERNAME
+        sync: false
+      - key: ADMIN_PASSWORD
+        sync: false

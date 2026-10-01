@@ -1,0 +1,12 @@
+{
+  "name": "nu-smart-id-queue",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node server.js",
+    "start:demo": "set DEMO_MODE=true&& node server.js"
+  },
+  "dependencies": {
+    "better-sqlite3": "^13.0.3"
+  }
+}
